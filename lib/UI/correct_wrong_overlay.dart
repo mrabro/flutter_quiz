@@ -26,6 +26,12 @@ class CorrectWrongOverlayState extends State<CorrectWrongOverlay> with SingleTic
     _iconAnimationController.forward();
   }
 
+    @override
+  void dispose(){
+    _iconAnimationController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context){
     return new Material(
